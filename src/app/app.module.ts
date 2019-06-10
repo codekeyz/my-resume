@@ -5,15 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
+import { ResumeModule } from './components/sections/resume/resume.module';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    ResumeModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase)
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
