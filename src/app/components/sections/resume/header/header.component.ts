@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Link } from './link.model';
 
 @Component({
   selector: 'app-header',
@@ -16,8 +15,6 @@ export class HeaderComponent implements OnInit {
   @Input() email: String;
 
   @Input() skype: String;
-
-  @Input() links: Link[];
 
   constructor() {}
 
