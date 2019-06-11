@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ResumeComponent } from './resume.component';
-import { FooterComponent } from '../../widgets/footer/footer.component';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './widgets/header/header.component';
+import { ResumeService } from './providers/resume.service';
+import { SkillComponent } from './widgets/skill/skill.component';
 
 @NgModule({
-  declarations: [ResumeComponent, FooterComponent, HeaderComponent],
+  declarations: [ResumeComponent, HeaderComponent, SkillComponent],
   imports: [CommonModule, AngularFirestoreModule],
-  providers: []
+  providers: [ResumeService]
 })
 export class ResumeModule {}
