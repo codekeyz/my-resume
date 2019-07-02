@@ -1,20 +1,14 @@
 <article class="resume-wrapper text-center position-relative">
   <div class="resume-wrapper-inner mx-auto text-left bg-white shadow-lg">
     <header app-header class="resume-header pt-4 pt-md-0" remove-wrapper>
-      <app-header
-        [avatar]="'https://avatars2.githubusercontent.com/u/22515508?s=460&v=4'"
-        [fullname]="'Chima Precious'"
-        [profession]="'Mobile Developer'"
-        [email]="'chima@witsghana.com'"
-        [skype]="'live:ositachima.co'"
-      ></app-header>
+      <app-header [avatar]="'https://avatars2.githubusercontent.com/u/22515508?s=460&v=4'" [fullname]="'Chima Precious'"
+        [profession]="'Mobile Developer'" [email]="'ositachima.co@gmail.com'" [skype]="'live:ositachima.co'">
+      </app-header>
     </header>
 
     <div class="resume-body p-5">
       <section class="resume-section summary-section mb-5">
-        <h2
-          class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3"
-        >
+        <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
           Career Summary
         </h2>
         <div class="resume-section-content">
@@ -32,17 +26,12 @@
       <div class="row">
         <div class="col-lg-9">
           <section class="resume-section experience-section mb-5">
-            <h2
-              class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3"
-            >
+            <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
               Work Experience
             </h2>
             <div class="resume-section-content">
               <div class="resume-timeline position-relative">
-                <article
-                  class="resume-timeline-item position-relative pb-5"
-                  *ngFor="let exp of expList | async"
-                >
+                <article class="resume-timeline-item position-relative pb-5" *ngFor="let exp of expList | async">
                   <div class="resume-timeline-item-header mb-2">
                     <div class="d-flex flex-column flex-md-row">
                       <h3 class="resume-position-title font-weight-bold mb-1">
@@ -62,9 +51,7 @@
                     <p>
                       {{ exp.roleDescription }}
                     </p>
-                    <h4
-                      class="resume-timeline-item-desc-heading font-weight-bold"
-                    >
+                    <h4 class="resume-timeline-item-desc-heading font-weight-bold">
                       Achievements:
                     </h4>
                     <p>{{ exp.achievementSummary }}</p>
@@ -73,17 +60,11 @@
                         {{ ach }}
                       </li>
                     </ul>
-                    <h4
-                      class="resume-timeline-item-desc-heading font-weight-bold"
-                      *ngIf="exp.technologies"
-                    >
+                    <h4 class="resume-timeline-item-desc-heading font-weight-bold" *ngIf="exp.technologies">
                       Technologies used:
                     </h4>
                     <ul class="list-inline" *ngIf="exp.technologies">
-                      <li
-                        class="list-inline-item"
-                        *ngFor="let tech of exp.technologies"
-                      >
+                      <li class="list-inline-item" *ngFor="let tech of exp.technologies">
                         <span class="badge badge-primary badge-pill">{{
                           tech
                         }}</span>
@@ -99,45 +80,28 @@
 
         <div class="col-lg-3">
           <section class="resume-section skills-section mb-5">
-            <h2
-              class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3"
-            >
+            <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
               Skills &amp; Tools
             </h2>
             <div class="resume-section-content">
               <div class="resume-skill-item" *ngIf="fntSkillList">
                 <h4 class="resume-skills-cat font-weight-bold">Frontend</h4>
-                <ul
-                  class="list-unstyled mb-4"
-                  *ngFor="let item of fntSkillList | async"
-                >
-                  <app-skill
-                    [name]="item.name"
-                    [percent]="item.percent"
-                  ></app-skill>
+                <ul class="list-unstyled mb-4" *ngFor="let item of fntSkillList | async">
+                  <app-skill [name]="item.name" [percent]="item.percent"></app-skill>
                 </ul>
               </div>
 
               <div class="resume-skill-item" *ngIf="backSkillList">
                 <h4 class="resume-skills-cat font-weight-bold">Backend</h4>
-                <ul
-                  class="list-unstyled"
-                  *ngFor="let item of backSkillList | async"
-                >
-                  <app-skill
-                    [name]="item.name"
-                    [percent]="item.percent"
-                  ></app-skill>
+                <ul class="list-unstyled" *ngFor="let item of backSkillList | async">
+                  <app-skill [name]="item.name" [percent]="item.percent"></app-skill>
                 </ul>
               </div>
 
               <div class="resume-skill-item">
                 <h4 class="resume-skills-cat font-weight-bold">Others</h4>
                 <ul class="list-inline">
-                  <li
-                    class="list-inline-item"
-                    *ngFor="let item of otherSkillList | async"
-                  >
+                  <li class="list-inline-item" *ngFor="let item of otherSkillList | async">
                     <span class="badge badge-light">{{ item.name }}</span>
                   </li>
                 </ul>
